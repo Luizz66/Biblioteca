@@ -19,7 +19,7 @@ namespace Biblioteca
 
         public static string RemoverAcentos(string texto)
         {
-            string textoNormalizado = texto.Normalize(NormalizationForm.FormD);nvolvimento
+            string textoNormalizado = texto.Normalize(NormalizationForm.FormD);
             StringBuilder resultado = new StringBuilder();
 
             foreach (char letra in textoNormalizado)
