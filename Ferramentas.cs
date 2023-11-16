@@ -6,23 +6,23 @@ namespace Biblioteca
 {
     public static class Ferramentas
     {
-        public static void print(dynamic texto = null)
+        public static void print(dynamic txt = null)
         {
-            if (texto != null) Console.WriteLine(texto);
+            if (txt != null) Console.WriteLine(txt);
             else Console.WriteLine();
         }
-        public static void print_(dynamic texto)
+        public static void print_(dynamic txt)
         {
-            Console.Write(texto);
+            Console.Write(txt);
         }
 
 
-        public static string RemoverAcentos(string texto)
+        public static string RemoverAcentos(string txt)
         {
-            string textoNormalizado = texto.Normalize(NormalizationForm.FormD);
+            string txtNormalizado = txt.Normalize(NormalizationForm.FormD);
             StringBuilder resultado = new StringBuilder();
 
-            foreach (char letra in textoNormalizado)
+            foreach (char letra in txtNormalizado)
             {
                 if (CharUnicodeInfo.GetUnicodeCategory(letra) != UnicodeCategory.NonSpacingMark)
                 {
@@ -34,16 +34,16 @@ namespace Biblioteca
         }
 
 
-        public static void ColorLine(string text, ConsoleColor color)
+        public static void ColorLine(string txt, ConsoleColor color)
         {
             Console.ForegroundColor = color;
-            Console.Write(text);
+            Console.Write(txt);
             Console.ResetColor();
         }
-        public static void ColorBack(string text, ConsoleColor color)
+        public static void ColorBack(string txt, ConsoleColor color)
         {
             Console.BackgroundColor = color;
-            Console.Write(text);
+            Console.Write(txt);
             Console.ResetColor();
         }
     }
